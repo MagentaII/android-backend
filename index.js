@@ -1,6 +1,16 @@
+require("dotenv").config(); // Load environment variables from .env file
+const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
+
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => console.log("✅ 已連線到 MongoDB"))
+  .catch((err) => {
+    console.error("❌ MongoDB 連線失敗：", err);
+    process.exit(1);
+  });
 
 const userRoutes = require("./routes/userRoutes");
 const authRoutes = require("./routes/authRoutes");

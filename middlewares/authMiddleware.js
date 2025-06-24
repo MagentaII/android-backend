@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const JWT_SECRET = "your_jwt_secret"; // 應與 auth.js 中的密鑰相同
+const JWT_SECRET = "my_jwt_secret"; // 應與 auth.js 中的密鑰相同
 
 function authenticateToken(req, res, next) {
   const authHeader = req.headers["authorization"]; // Authorization: Bearer <token>
