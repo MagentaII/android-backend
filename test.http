@@ -1,0 +1,61 @@
+### 取得所有使用者
+GET http://localhost:3000/api/users
+
+### 新增一位使用者
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name": "Charlie"
+}
+
+### 更新使用者
+PUT http://localhost:3000/api/users/2
+Content-Type: application/json
+
+{
+  "name": "Updated Bob"
+}
+
+### 刪除使用者
+DELETE http://localhost:3000/api/users/1
+
+### 註冊帳號
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "1234567890"
+}
+
+### 登入帳號
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "1234567890"
+}
+
+### 使用 Token 存取受保護 API
+GET http://localhost:3000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNzUwNjY4ODQ4LCJleHAiOjE3NTA2NzYwNDh9.rXV7eBxol9Lxp6UKoZ5vFIanPtrRxPqBrZomTqmCI5c
+
+### 建立新筆記
+POST http://localhost:3000/api/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNzUwNjY4ODQ4LCJleHAiOjE3NTA2NzYwNDh9.rXV7eBxol9Lxp6UKoZ5vFIanPtrRxPqBrZomTqmCI5c
+
+{
+  "title": "我的第一篇筆記",
+  "content": "今天完成了 Node.js 登入系統！"
+}
+
+### 取得筆記清單
+GET http://localhost:3000/api/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNzUwNjY4ODQ4LCJleHAiOjE3NTA2NzYwNDh9.rXV7eBxol9Lxp6UKoZ5vFIanPtrRxPqBrZomTqmCI5c
+
+### 刪除筆記
+DELETE http://localhost:3000/api/notes/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNzUwNjY4ODQ4LCJleHAiOjE3NTA2NzYwNDh9.rXV7eBxol9Lxp6UKoZ5vFIanPtrRxPqBrZomTqmCI5c
