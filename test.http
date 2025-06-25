@@ -40,12 +40,12 @@ Content-Type: application/json
 
 ### 使用 Token 存取受保護 API
 GET http://localhost:3000/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgxODcxMSwiZXhwIjoxNzUwODI1OTExfQ.0lHhAHyTZl2Yf2aLNAQ918Oa7oGP39_1T1RF01bxHLw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgzMzE3NiwiZXhwIjoxNzUwODQwMzc2fQ.BO-V2UxphqK032098OvF4mqqJXW8euu_LgFf16lIzd0
 
 ### 建立新筆記
 POST http://localhost:3000/api/notes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgxODcxMSwiZXhwIjoxNzUwODI1OTExfQ.0lHhAHyTZl2Yf2aLNAQ918Oa7oGP39_1T1RF01bxHLw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgzMzE3NiwiZXhwIjoxNzUwODQwMzc2fQ.BO-V2UxphqK032098OvF4mqqJXW8euu_LgFf16lIzd0
 
 {
   "title": "我的第一篇筆記",
@@ -54,12 +54,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExO
 
 ### 取得筆記清單
 GET http://localhost:3000/api/notes
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgxODcxMSwiZXhwIjoxNzUwODI1OTExfQ.0lHhAHyTZl2Yf2aLNAQ918Oa7oGP39_1T1RF01bxHLw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgzMzE3NiwiZXhwIjoxNzUwODQwMzc2fQ.BO-V2UxphqK032098OvF4mqqJXW8euu_LgFf16lIzd0
 
 ### 更新筆記
 PUT http://localhost:3000/api/notes/685a740945ac67e32adee55d
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgxODcxMSwiZXhwIjoxNzUwODI1OTExfQ.0lHhAHyTZl2Yf2aLNAQ918Oa7oGP39_1T1RF01bxHLw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgzMzE3NiwiZXhwIjoxNzUwODQwMzc2fQ.BO-V2UxphqK032098OvF4mqqJXW8euu_LgFf16lIzd0
 
 {
   "title": "更新筆記標題",
@@ -67,5 +67,32 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExO
 }
 
 ### 刪除筆記
-DELETE http://localhost:3000/api/notes/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgxODcxMSwiZXhwIjoxNzUwODI1OTExfQ.0lHhAHyTZl2Yf2aLNAQ918Oa7oGP39_1T1RF01bxHLw
+DELETE http://localhost:3000/api/notes/685a740945ac67e32adee55d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgzMzE3NiwiZXhwIjoxNzUwODQwMzc2fQ.BO-V2UxphqK032098OvF4mqqJXW8euu_LgFf16lIzd0
+
+### 建立任務
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgzMzE3NiwiZXhwIjoxNzUwODQwMzc2fQ.BO-V2UxphqK032098OvF4mqqJXW8euu_LgFf16lIzd0
+
+{
+  "title": "完成 App 任務模組"
+}
+
+### 取得任務清單
+GET http://localhost:3000/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgzMzE3NiwiZXhwIjoxNzUwODQwMzc2fQ.BO-V2UxphqK032098OvF4mqqJXW8euu_LgFf16lIzd0
+
+### 更新任務
+PUT http://localhost:3000/api/tasks/685b98b084643936f3956ddc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgzMzE3NiwiZXhwIjoxNzUwODQwMzc2fQ.BO-V2UxphqK032098OvF4mqqJXW8euu_LgFf16lIzd0
+
+{
+  "title": "更新任務標題 - 已完成",
+  "done": true
+}
+
+### 刪除任務
+DELETE http://localhost:3000/api/tasks/685b98b084643936f3956ddc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDgzMzE3NiwiZXhwIjoxNzUwODQwMzc2fQ.BO-V2UxphqK032098OvF4mqqJXW8euu_LgFf16lIzd0
