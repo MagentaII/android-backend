@@ -21,6 +21,19 @@ router.post("/", authenticateToken, async (req, res) => {
   res.status(201).json(note);
 });
 
+// PUT /api/notes/:id: 更新筆記 (需驗證)
+router.put("/:id", authenticateToken, async (req, res) => {
+  const { title, content } = req.body;
+
+  const UpdateNote = await Note.findOneAndUpdate(
+    { _id: req.params.id, userId: req.user.id },
+    { title, content },
+    { new: true }
+  );
+  if (!UpdateNote) return res.status(404).json({ message: "筆記不存在或無權限" });
+  res.json(UpdateNote);
+});
+
 // DELETE /api/notes/:id: 刪除筆記 (需驗證)
 router.delete("/:id", authenticateToken, async (req, res) => {
   const note = await Note.findOneAndDelete({
