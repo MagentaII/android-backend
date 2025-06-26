@@ -1,3 +1,11 @@
+### 用 refresh token 換新 access token
+POST http://localhost:3000/api/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWE1ZjExOTdkZDVmMjRjZTUxZDEwMCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDkyMDE3MiwiZXhwIjoxNzUxNTI0OTcyfQ.6EY-l9DUi2N0ddjYShnQkuoxPnzNQRrMArOomjo14No"
+}
+
 ### 取得所有使用者
 GET http://localhost:3000/api/users
 
